@@ -1,0 +1,27 @@
+<ion-view title="Search" ng-controller="MapCtrl">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <h1>Search</h1>
+    <div id="map"></div>
+    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    </div>
+    
+    
+    
+  <b>xxMy geolocation:</b> <br />
+  Latitude: {{position.coords.latitude}} <br />
+  Longitude: {{position.coords.longitude}} <br />
+  Altitude: {{position.coords.altitude}} <br />
+  Accuracy: {{position.coords.accuracy}} <br />
+  Altitude Accuracy: {{position.coords.altitudeAccuracy}} <br />
+  Heading: {{position.coords.heading}} <br />
+  Speed: {{position.coords.speed}} <br />
+  Timestamp: {{position.timestamp}} <br />
+
+
+
+  </ion-content>
+</ion-view>
